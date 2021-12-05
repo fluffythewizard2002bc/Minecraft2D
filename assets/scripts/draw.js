@@ -34,7 +34,7 @@ function elemntsChoose(square, matValue) {
 export function draw() {
     let copyMatrix = [];
     copyMatrix = [...matrix];
-    console.log(copyMatrix);
+
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix.length; j++) {
 
