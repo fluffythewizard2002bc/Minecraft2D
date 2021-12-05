@@ -1,0 +1,71 @@
+.gameSideBar {
+    width: 15vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bar1 {
+    width: 4rem;
+    height: 4rem;
+    border: 0.1rem solid yellowgreen;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+.axe {
+    background: url('/assets/pics/axe.png') no-repeat center center/cover;
+}
+
+.pick {
+    background: url('/assets/pics/pick.png') no-repeat center center/cover;
+}
+
+.shovel {
+    background: url('/assets/pics/shovel.png') no-repeat center center/cover;
+}
+
+.sword {
+    background: url('/assets/pics/pngkey.com-minecraft-diamond-sword-png-1473776.png') no-repeat center center/cover;
+}
+
+.bar2 {
+    border: 0.1rem solid yellow;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    background: url('/assets/pics/header.jpg') no-repeat center center/cover;
+}
+
+.sideB {
+    font-size: 2rem;
+    align-self: baseline;
+    border: 0.1rem solid rgb(126, 240, 240);
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+.shovel:active {
+    border: 0.2rem solid orchid;
+}
+
+.sword:active {
+    border: 0.2rem solid orchid;
+}
+
+.pick:active {
+    border: 0.2rem solid orchid;
+}
+
+.axe:active {
+    border: 0.2rem solid orchid;
+}
+
+.reset {
+    border: 0.1rem solid yellow;
+    border-radius: 10%;
+    width: 6rem;
+    height: 3rem;
+    background: url(/assets/pics/kisspng-pixel-art-speech-balloon-reset-button-pixel-5ac586ee181248.9443864215228945740986.png) no-repeat center center/cover;
+}

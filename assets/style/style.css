@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('/assets/Minecraft.ttf') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('/assets/Minecraft.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+#container {
+    display: none;
+    font-family: 'Minecraft';
+    width: 95vw;
+    height: 95vh;
+    max-width: 95%;
+    background-color: rgb(123, 179, 34);
+}
+
+.gameBoard {
+    display: grid;
+    background-color: rgb(77, 127, 192);
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    border: 1px solid black;
+    width: 85vmax;
+    background-color: aqua;
+}
+
+.ground {
+    background: url('/assets/pics/dirt.png') no-repeat center center/cover;
+}
+
+.green {
+    background: url('/assets/pics/green.png') no-repeat center center/cover;
+}
+
+.groundGrass {
+    background: url('/assets/pics/grass.png') no-repeat center center/cover;
+}
+
+.stone {
+    background: url('/assets/pics/stone.png') no-repeat center center/cover;
+}
+
+.cloud {
+    background-color: #fff;
+}
+
+.wood {
+    background: url('/assets/pics/wood.png') no-repeat center center/cover;
+}
