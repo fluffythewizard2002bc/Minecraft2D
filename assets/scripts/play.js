@@ -2,15 +2,14 @@ import { state, gameBoard } from "./constants.js";
 import { clickedStart } from "./app.js";
 
 
-
 const toolPick = document.querySelector('.pick');
 toolPick.addEventListener("click", (e) => {
 
     state[2].tools.active.pop();
     state[2].tools.active.push('pick');
     let toolPicks = document.getElementsByTagName("body")[0];
-    toolPicks.style.cursor = "url('../pics/pick.ani'), 0 0 pointer";
-    "../pics/axe.ani"
+    toolPicks.style.cursor = "url(assets/pics/pick.ani), auto";
+
 });
 const toolAxe = document.querySelector('.axe');
 toolAxe.addEventListener("click", (e) => {
@@ -18,10 +17,8 @@ toolAxe.addEventListener("click", (e) => {
     state[2].tools.active.pop();
     state[2].tools.active.push('axe');
 
-    //document.body.style.cursor = import shovel.ini from "../pics";
-    //document.body.style.cursor = url('..pics/axe.ini'), auto;
     let toolAxes = document.getElementsByTagName("body")[0];
-    toolAxes.style.cursor = "url('../pics/axe.ani'), 0 0 pointer";
+    toolAxes.style.cursor = "url(assets/pics/axe.ani), auto";
 });
 const toolShovel = document.querySelector('.shovel');
 toolShovel.addEventListener("click", (e) => {
@@ -29,7 +26,7 @@ toolShovel.addEventListener("click", (e) => {
     state[2].tools.active.pop();
     state[2].tools.active.push('shovel');
     let toolShovels = document.getElementsByTagName("body")[0];
-    toolShovels.style.cursor = "url('../pics/shovel.ani'), 0 0 pointer";
+    toolShovels.style.cursor = "url(assets/pics/shovel.ani), auto";
 });
 
 const toolSword = document.querySelector('.sword');
@@ -38,24 +35,19 @@ toolSword.addEventListener("click", (e) => {
     state[2].tools.active.pop();
     state[2].tools.active.push('sword');
     let toolSwords = document.getElementsByTagName("body")[0];
-    toolSwords.style.cursor = "url('../pics/sword.ani'), 0 0 pointer";
-
+    toolSwords.style.cursor = "url(assets/pics/sword.ani), auto";
 });
 
 gameBoard.addEventListener("click", (e) => {
     let sq = e.target.closest("div");
-    console.log(sq);
-    console.log(sq.classList[0]); //element
 
     let tooli = state[2].tools.active[0];
-    console.log(state[2].tools.active[0]); //active tool
+
     if (tooli != undefined) {
         const arr = state[2].tools[tooli]; // array of elements valid to scAm
         if (arr.includes(sq.classList[0])) {
-            console.log("valid to cut");
+
             validToCut(sq);
-        } else {
-            console.log("gtfo");
         }
     }
 });
@@ -69,7 +61,6 @@ function validToCut(sq) {
 
 function saveToInventory(elm) {
     state[3].inventory[elm]++;
-    console.log(state[3].inventory);
 }
 
 const resetG = document.querySelector('.reset');
